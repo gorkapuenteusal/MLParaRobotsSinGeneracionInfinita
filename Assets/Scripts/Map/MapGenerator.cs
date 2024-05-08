@@ -39,7 +39,7 @@ public class MapGenerator : MonoBehaviour
 
   public void DrawMapInEditor() {
     MapData mapData = MapData.Generate(mapSize, seed, noiseScale, octaves, persistance, lacunarity, edgeMap, regions);
-    MapDisplay display = FindObjectOfType<MapDisplay>();
+    MapDisplay display = FindFirstObjectByType<MapDisplay>();
     display.DrawMesh(MeshData.Generate(mapData.heightMap, heightMultiplier, heightCurve), TextureGenerator.FromColorMap(mapData.colorMap, mapSize));
   }
 

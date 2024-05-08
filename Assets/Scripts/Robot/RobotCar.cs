@@ -36,7 +36,7 @@ public class RobotCar : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        mapGenerator = FindObjectOfType<MapGenerator>();
+        mapGenerator = FindFirstObjectByType<MapGenerator>();
         if (mapGenerator == null)
         {
             Debug.LogError("MapGenerator not found in the scene!");
