@@ -6,8 +6,8 @@ public class MapGenerator : MonoBehaviour
 {
   public const int maxSeed = int.MaxValue;
 
-  [Range(100, 500)]
-  public int mapSize = 100;
+  [Range(20, 256)]
+  public int mapSize = 150;
   [Range(10, 500)]
   public float noiseScale = 10;
   [Range(1, 25)]
